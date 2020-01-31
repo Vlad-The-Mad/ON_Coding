@@ -73,6 +73,8 @@ public:
 };
 
 // Bonus Question: why did I type cast this?
+
+/* Doing this typedefine adds to the clarity of the code */
 typedef std::function<bool(rapidjson::Value &)> CommandHandler;
 
 class CommandDispatcher {
@@ -86,6 +88,12 @@ public:
     virtual ~CommandDispatcher()
     {
         // question why is it virtual? Is it needed in this case?
+	
+        /* It is good practice to make base class destructors virtual.
+	 * This is to make sure that its destructor (as opposed to a child's destructor)
+	 * will be called when deleting a base object.  However, since
+	 * the dispatcher has no children, this isn't necessary.
+	 */
     }
 
     bool addCommandHandler(std::string command, CommandHandler handler)
@@ -110,6 +118,9 @@ private:
     std::map<std::string, CommandHandler> command_handlers_;
 
     // Question: why delete these?
+
+    /* This is to explicitly inform coders "don't implement these constructors!"
+     */
 
     // delete unused constructors
     CommandDispatcher (const CommandDispatcher&) = delete;
