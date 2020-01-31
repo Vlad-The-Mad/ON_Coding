@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vladimir/programming/onsemi/embedded_coding_challenge_internship/embedded_coding_challenge_internship/lock_guard/main.cpp
+iostream
+-
+mutex
+-
+random
+-
+chrono
+-
+thread
+-
+pthread.h
+-
+

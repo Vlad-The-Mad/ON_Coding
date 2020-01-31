@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/thread_synchronization.dir/main.cpp.o  -o thread_synchronization -lpthread 
